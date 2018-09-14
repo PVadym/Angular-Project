@@ -1,0 +1,60 @@
+<section class="hero is-fullheight  is-bold cntbgimg">
+  <div class="container">
+    <div class="field">
+      <label class="label">Username</label>
+      <div class="control has-icons-left has-icons-right">
+        <input class="input is-success" type="text" placeholder="User name" name="ffds" [(ngModel)]="username" required minlength="3" #usernameInput="ngModel">
+        <span class="icon is-small is-left">
+      <i class="fas fa-user"></i>
+    </span>
+        <span class="icon is-small is-right">
+      <i class="fas fa-check"></i>
+    </span>
+      </div>
+      <p class="help is-success">This username is available</p>
+    </div>
+    <div class="help is-danger" *ngIf="usernameInput.invalid">
+      Error in username
+    </div>
+
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control has-icons-left has-icons-right">
+        <input class="input is-danger" type="email" placeholder="Email input" name="ff" [(ngModel)]="email" required email #emailInput="ngModel">
+        <span class="icon is-small is-left">
+      <i class="fas fa-envelope"></i>
+    </span>
+        <span class="icon is-small is-right">
+      <i class="fas fa-exclamation-triangle"></i>
+    </span>
+      </div>
+      <p class="help is-danger">This email is invalid</p>
+    </div>
+    <div class="help is-danger" *ngIf="emailInput.invalid && emailInput.touched" >
+      s
+      <div *ngFor=" let s of emailInput.errors">
+        <p>{{s}}</p>
+        d
+      </div>
+    </div>
+
+
+    <div class="field">
+      <label class="label">Message</label>
+      <div class="control">
+        <textarea class="textarea" placeholder="Textarea" [(ngModel)]="text" name="sdff" required #textInput = "ngModel"></textarea>
+      </div>
+    </div>
+
+    <div class="help is-danger" *ngIf="textInput.invalid && textInput.dirty">
+      Error in text
+    </div>
+
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link is-danger" (click)="submitForm()">Submit</button>
+      </div>
+    </div>
+  </div>
+</section>

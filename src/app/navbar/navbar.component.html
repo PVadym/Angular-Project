@@ -1,0 +1,36 @@
+<nav class="navbar is-dark">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="assets/img/mortal_kombat_logo-svg.png" alt="Bulma: a modern CSS framework based on Flexbox" width="65" height="100">
+    </a>
+    <div role="button" class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" routerLink="/">
+        Home
+      </a>
+      <a class="navbar-item" routerLink="/users">
+        Users
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" routerLink="/">
+          Menu
+        </a>
+        <div class="navbar-dropdown is-boxed">
+          <a class="navbar-item" href="https://google.com">
+            Google </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item" routerLink="/contacts">
+            Our Contacts
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
